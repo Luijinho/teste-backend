@@ -1,8 +1,8 @@
-<h1>Componentes</h1>
+# Componentes
 
-[API](api/)<br>
-[Micro-serviço de Produto](product-service/)<br>
-[Micro-serviço de Carrinho de Compras](cart-service/)
+ - [API](api/)<br>
+ - [Micro-serviço de Produto](product-service/)<br>
+ - [Micro-serviço de Carrinho de Compras](cart-service/)
 
 Foi criado um docker compose de forma a facilitar a inicialização da API, dos micro-serviços e das bases de dados.
 
@@ -12,9 +12,9 @@ Para executar o docker compose basta ter o Docker instalado na máquina e execut
 docker-compose up
 ```
 
-<h2>API Endpoints</h2>
+## API Endpoints
 
-<h3>Produtos</h3>
+### Produtos
 
 <b>Obter todos os produtos</b>
 
@@ -30,7 +30,7 @@ http://localhost:3000/products
 http://localhost:3000/products/:id
 ```
 
-<h3>Carrinho de Compras</h3>
+### Carrinho de Compras
 
 <b>Obter carrinho de compras</b>
 
