@@ -1,0 +1,31 @@
+version: '3'
+services:
+  api:
+    build: ./api
+    ports:
+      - 3000:3000
+    depends_on:
+      - product-service
+      - cart-service
+  product-service:
+    build: ./product-service
+    ports:
+      - 3001:3001
+    depends_on:
+      - mongodb
+  cart-service:
+    build: ./cart-service
+    ports:
+      - 3002:3002
+    depends_on:
+      - postgresql
+  mongodb:
+    image: mongo
+  postgresql:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: testedbnew
+    ports:
+      - 5432:5432
